@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2" >
+
+    <CheckBox
+        android:id="@+id/Mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="left"
+        android:layout_marginTop="13dp"
+        android:text="Just Find Plates" />
+
+    <TextView
+        android:id="@+id/Output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Mode"
+        android:layout_below="@+id/Button"
+        android:layout_gravity="left"
+        android:ellipsize="none"
+        android:scrollHorizontally="false" />
+
+    <EditText
+        android:id="@+id/Weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Mode"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Weight"
+        android:layout_toRightOf="@+id/Weight"
+        android:onClick="calculateOutput"
+        android:text="Math!" />
+
+    <Button
+        android:id="@+id/StartStopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="18dp"
+        android:onClick="toggleTimer"
+        android:text="Start/Stop" />
+
+    <TextView
+        android:id="@+id/Timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/StartStopButton"
+        android:layout_alignBottom="@+id/StartStopButton"
+        android:layout_alignRight="@+id/Weight"
+        android:text="0:00"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Timer"
+        android:layout_alignBottom="@+id/Timer"
+        android:layout_alignParentRight="true"
+        android:onClick="resetTimer"
+        android:text="Reset" />
+
+</RelativeLayout>
